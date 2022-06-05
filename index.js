@@ -38,7 +38,57 @@ inquirer.prompt(
             choices:['The MIT License', 'The GPL License', 'Apache License', 'GNU License', 'N/A'],
             validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
         },
+        {
+            type: 'input',
+            message: 'GitHub username:',
+            name: 'git',
+            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}}
+        },
+        {
+            type: 'input',
+            message: 'E-mail:',
+            name: 'email',
+            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+        }
     ]
+).then(({
+    title,
+    installation,
+    instructions,
+    credit,
+    license,
+    git,
+    linkedin,
+    email,
+    usage,
+    contribution
+}) => {
+// template to be used
+const template = `# ${title}
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [contribution](#contribution)
+* [Credits](#credits)
+* [License](#license)
+* Installation
+${installation}
+## Usage
+${usage}
+## Contribution
+${contribution}
+### instructions
+${instructions}
+## Credits
+${credit}
+## License
+${license}
+
+# Contact
+* GitHub :${git}
+* LinkedIn :${linkedin}
+* E-mail :${email}`;
+}
 )
 
 // TODO: Create a function to write README file
