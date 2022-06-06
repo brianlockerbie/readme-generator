@@ -6,7 +6,7 @@ function listOfContents(license) {
   1. [Installation](#installation)
   2. [Usage](#usage)
   3. [Contribution](#contribution)
-  4. [Credits](#credits)
+  4. [Tests](#tests)
   5. [License](#license)
   `
   }
@@ -14,9 +14,10 @@ function listOfContents(license) {
   return `
   1. [Installation](#installation)
   2. [Usage](#usage)
-  3. [Contribution](#contribution)
-  4. [Credits](#credits)
+  3. [Contributing](#contributing)
+  4. [Tests](#tests)
   5. [License](#license)
+  6. [Questions](#questions)
   `
 }
 
@@ -69,8 +70,14 @@ const { title, description, installation, usage, license, ...questions } = data;
 
   ${renderLicenseSection(license)}
 
-  ## Contribution
-  ${contribution}
+  ## Contributing
+
+  ## Tests
+
+  ## Questions
+
+  [GitHub](https://github.com/${questions.github})
+  For questions, send an email to [${questions.email}](mailto:${questions.email})
 
 
 `;

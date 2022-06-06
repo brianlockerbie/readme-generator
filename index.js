@@ -59,13 +59,9 @@ const questions = [
 ];
 
 
-// Function to create readme using fs
-createNewFile(title, template);
-
-
 // TODO: Create a function to write README file
 // Creating createNewFile function
-function createNewFile(fileName, data) {
+function writeToFile(fileName, data) {
 // fs
 fs.writeFile(`./dist/${fileName}.md`, generateMarkdown(data), err => {
     if(err) {
