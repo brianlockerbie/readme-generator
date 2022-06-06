@@ -14,7 +14,7 @@ Node.js is used to generate README.md files in this application. After answering
 First clone this repository & install Node.js to your computer. Once installed, type "node index.js" in the terminal. Answer all of the prompts to generate a README file. The new README.ms file will be located in a folder called "dist" in the root directory.
 
 ## Usage
-View video walkthrough on how to use this application
+View video walkthrough on how to use this application: https://drive.google.com/file/d/1guk75kYYg_O4WBfT-7x07QlJWOnnQ5Ad/view
 
 ## Contributing
 
