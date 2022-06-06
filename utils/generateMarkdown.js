@@ -44,7 +44,7 @@ function renderLicenseSection(license) {
   <a name="license"></a>
   
   ## License
-  This repository is licensed with the ${license} License - read the [license info](${renderLicenseLink}) for more.
+  This repository is licensed with the ${license} License - read the license info for more.
   `
 }
 
