@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require("./util/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 inquirer.prompt(
@@ -71,12 +71,7 @@ const template = `# ${title}
 * [contribution](#contribution)
 * [Credits](#credits)
 * [License](#license)
-* Installation
-${installation}
-## Usage
-${usage}
-## Contribution
-${contribution}
+
 ### instructions
 ${instructions}
 ## Credits
@@ -97,7 +92,7 @@ createNewFile(title, template);
 // Creating createNewFile function
 function createNewFile(fileName, data) {
 // fs
-fs.writeFile(`./dist/${fileName}.md`, generateMarkdown(data), (err) => {
+fs.writeFile(`./dist/${fileName}.md`, generateMarkdown(data), err => {
     if(err) {
         console.log(err)
     }

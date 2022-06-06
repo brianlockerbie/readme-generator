@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function templateOfContents(license) {
+function listOfContents(license) {
   if(license === "None") {
     return `
   1. [Installation](#installation)
@@ -49,7 +49,29 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+
+const { title, description, installation, usage, license, ...questions } = data;
+
+  return `# ${title}
+
+  ## Description
+  ${description}
+  ${renderLicenseBadge(license)}
+
+  ## List of Contents
+  ${listOfContents(license)}
+
+  ## Installation
+  ${installation}
+
+  ## Usage
+  ${usage}
+
+  ${renderLicenseSection(license)}
+
+  ## Contribution
+  ${contribution}
+
 
 `;
 }
