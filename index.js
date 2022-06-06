@@ -81,8 +81,7 @@ ${contribution}
 ${instructions}
 ## Credits
 ${credit}
-## License
-${license}
+
 
 # Contact
 * GitHub :${git}
@@ -98,7 +97,7 @@ createNewFile(title, template);
 // Creating createNewFile function
 function createNewFile(fileName, data) {
 // fs
-fs.writeFile(`./dist/${fileName}.md`, generateMarkson(data), (err) => {
+fs.writeFile(`./dist/${fileName}.md`, generateMarkdown(data), (err) => {
     if(err) {
         console.log(err)
     }
