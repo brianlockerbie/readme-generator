@@ -4,13 +4,19 @@ const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-inquirer.prompt(
-    [
+const questions = [
         {
             type: 'input',
-            message: "What's the project title?",
+            message: "What is the title of your project? (Required)",
             name: 'title',
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+            validate: nameValue => {
+                if(nameValue) {
+                    return true;
+                } else {
+                    console.log("Enter project title!");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -49,44 +55,13 @@ inquirer.prompt(
             message: 'E-mail:',
             name: 'email',
             validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
-        }
-    ]
-).then(({
-    title,
-    installation,
-    instructions,
-    credit,
-    license,
-    git,
-    linkedin,
-    email,
-    usage,
-    contribution
-}) => {
-// template to be used
-const template = `# ${title}
+        },
+];
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [contribution](#contribution)
-* [Credits](#credits)
-* [License](#license)
-
-### instructions
-${instructions}
-## Credits
-${credit}
-
-
-# Contact
-* GitHub :${git}
-* LinkedIn :${linkedin}
-* E-mail :${email}`;
 
 // Function to create readme using fs
 createNewFile(title, template);
-}
-);
+
 
 // TODO: Create a function to write README file
 // Creating createNewFile function
