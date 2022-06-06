@@ -1,7 +1,7 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,15 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.5.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianlockerbie/readme-generator-app.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/brianlockerbie/readme-generator-app/issues"
+  },
+  "homepage": "https://github.com/brianlockerbie/readme-generator-app#readme"
 }
