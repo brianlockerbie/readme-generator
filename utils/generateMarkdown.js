@@ -57,6 +57,7 @@ const { title, description, installation, usage, license, ...questions } = data;
 
   ## Description
   ${description}
+  <br/>
   ${renderLicenseBadge(license)}
 
   ## List of Contents

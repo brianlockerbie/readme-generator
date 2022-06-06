@@ -7,7 +7,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
         {
             type: 'input',
-            message: "What is the title of your project? (Required)",
+            message: "What is the title of your project?",
             name: 'title',
             validate: nameValue => {
                 if(nameValue) {
@@ -20,21 +20,33 @@ const questions = [
         },
         {
             type: 'input',
+            message: "Enter a description of your project.",
+            name: 'description',
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+        },
+        {
+            type: 'input',
             message: "What are the instructions to be followed?",
             name: 'instructions',
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
             type: 'input',
             message: "How do you install your app?",
             name: 'installation',
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
             type: 'input',
-            message: "Are there any credits?",
-            name: 'installation',
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+            message: "What are the contributing details to this project?",
+            name: 'contributing',
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
+        },
+        {
+            type: 'input',
+            message: "What are the usage details for this project?",
+            name: 'usage',
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
             // list of licenses
@@ -42,19 +54,19 @@ const questions = [
             message: "What license did you use for your app?",
             name: 'license',
             choices:['The MIT License', 'The GPL License', 'Apache License', 'GNU License', 'N/A'],
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
         {
             type: 'input',
             message: 'GitHub username:',
             name: 'git',
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}}
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}}
         },
         {
             type: 'input',
             message: 'E-mail:',
             name: 'email',
-            validate: (value)=>{ if(value){return true} else {return 'i need a value to continue'}},
+            validate: (value)=>{ if(value){return true} else {return 'I need a value to continue'}},
         },
 ];
 
