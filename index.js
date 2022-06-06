@@ -88,9 +88,24 @@ ${license}
 * GitHub :${git}
 * LinkedIn :${linkedin}
 * E-mail :${email}`;
-}
-)
 
+// Function to create readme using fs
+createNewFile(title, template);
+}
+);
+
+// Creating createNewFile function
+function createNewFile(fileName, data) {
+// fs
+fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.nd`, data, (err) => {
+    if(err) {
+        console.log(err)
+    }
+    console.log('Your README has been generated');
+})
+
+
+}
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
