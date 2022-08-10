@@ -47,3 +47,7 @@ View video walkthrough on how to use this application by clicking [here](https:/
 
 ## Screenshot
 <img src="README-app-example.png">
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
